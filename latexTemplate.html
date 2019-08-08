@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Formula to Template by Html</title>
+  <link rel="stylesheet" href="http://www.91chengguo.com/pc/cgEditor/common/katex/katex.min.css" >
+  <script src="http://www.91chengguo.com/pc/cgEditor/common/katex/katex.min.js"></script>
+</head>
+<body>
+  <div class="math-formula-code">
+    这个div中就是需要放的：
+    例如:
+  		 <span class="mathquill-embedded-latex" style="width: 26px; height: 41px;">\frac{2}{2}</span>
+  </div>
+</body>
+<script>
+   	 var latexDom = document.getElementsByClassName('mathquill-embedded-latex');
+	 for(var i = 0; i< latexDom.length; i++){
+	 	var latexVal = latexDom[i].innerHTML;
+	 	 katex.render(latexVal, latexDom[i] , {
+	        throwOnError: false
+	     });
+	 }
+</script>
+</html>
